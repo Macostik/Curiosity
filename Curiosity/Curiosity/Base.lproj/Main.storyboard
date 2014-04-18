@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Lc4-AC-5u5">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -113,9 +114,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eD-fa-b0F">
-                                <rect key="frame" x="100" y="450" width="121" height="29"/>
+                                <rect key="frame" x="86" y="449" width="148" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Login to Facebook">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,13 +125,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1eD-fa-b0F" firstAttribute="top" secondItem="Gmf-Pu-7mk" secondAttribute="bottom" constant="-118" id="Kno-Nq-QKy"/>
+                            <constraint firstAttribute="centerX" secondItem="Gmf-Pu-7mk" secondAttribute="centerX" id="1w2-dG-D72"/>
+                            <constraint firstItem="1eD-fa-b0F" firstAttribute="top" secondItem="Gmf-Pu-7mk" secondAttribute="bottom" constant="-119" id="Kno-Nq-QKy"/>
                             <constraint firstAttribute="bottom" secondItem="Gmf-Pu-7mk" secondAttribute="bottom" id="ZhY-kK-8dq"/>
                             <constraint firstAttribute="centerX" secondItem="1eD-fa-b0F" secondAttribute="centerX" id="caM-zl-317"/>
                             <constraint firstItem="Gmf-Pu-7mk" firstAttribute="top" secondItem="QLr-4W-6LL" secondAttribute="top" id="cbC-dA-SKT"/>
                             <constraint firstItem="Gmf-Pu-7mk" firstAttribute="leading" secondItem="QLr-4W-6LL" secondAttribute="leading" id="xIc-ou-zGq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="placeholderImageView" destination="Gmf-Pu-7mk" id="acx-ta-J3O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cf0-AH-DWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

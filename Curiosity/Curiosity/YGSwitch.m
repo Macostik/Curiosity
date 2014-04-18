@@ -36,17 +36,18 @@
 
 - (void)setup {
     self.containView = [UIView new];
-    self.containView.frame = (CGRect){{0,0},{self.width, self.height}};
-    self.containView.layer.cornerRadius = self.height/2;
+    self.containView.frame = (CGRect){{0,0},{self.frame.size.width, self.frame.size.height}};
+    self.containView.layer.cornerRadius = self.height/kSwith_Padding;
     [self addSubview:self.containView];
     
     self.thumbneilView = [UIView new];
-    self.thumbneilView.frame = (CGRect){{SWITCH_PADDING, SWITCH_PADDING},
-                                        {self.height - 2*SWITCH_PADDING, self.height - 2*SWITCH_PADDING}};
-    self.thumbneilView.layer.cornerRadius = self.height/2 - SWITCH_PADDING;
+    self.thumbneilView.frame = (CGRect){{kSwith_Padding, kSwith_Padding},
+                                        {self.height - kSwith_Padding*kSwith_Padding,
+										self.frame.size.height - kSwith_Padding*kSwith_Padding}};
+    self.thumbneilView.layer.cornerRadius = self.height/kSwith_Padding - kSwith_Padding;
     self.thumbneilView.layer.shadowColor = [UIColor blackColor].CGColor;
     self.thumbneilView.layer.shadowOffset = (CGSize){0, 1};
-    self.thumbneilView.layer.shadowRadius = SWITCH_PADDING;
+    self.thumbneilView.layer.shadowRadius = kSwith_Padding;
     self.thumbneilView.layer.shadowOpacity = 1.0f;
     self.thumbneilView.backgroundColor = self.thumbneilColor;
     [self.containView addSubview:self.thumbneilView];
@@ -72,13 +73,13 @@
 }
 
 - (BOOL)isOn {
-    return self.thumbneilView.x > SWITCH_PADDING;
+    return self.thumbneilView.height > kSwith_Padding;
 }
 
 - (void)setIsOn:(BOOL)isOn {
-    self.containView.backgroundColor =  (isOn) ? self.placeholderColor : OFF_STATE_BG_COLOR;
-    self.thumbneilView.origin = (isOn) ? (CGPoint){self.containView.width - self.containView.height + SWITCH_PADDING, SWITCH_PADDING} :
-                                         (CGPoint){SWITCH_PADDING, SWITCH_PADDING};
+    self.containView.backgroundColor =  (isOn) ? self.placeholderColor : kOff_State_Bg_Color;
+    self.thumbneilView.origin = (isOn) ? (CGPoint){self.containView.width - self.containView.height + kSwith_Padding, kSwith_Padding} :
+                                         (CGPoint){kSwith_Padding, kSwith_Padding};
 }
 
 - (void)tapThumb:(UITapGestureRecognizer *)tapGestureRecognizer {
@@ -104,8 +105,10 @@
 
 - (void)stretchEffect {
     [UIView animateWithDuration:.33f animations:^{
-        self.thumbneilView.frame = (self.isOn) ? (CGRect){{self.thumbneilView.x - 5, self.thumbneilView.y},{self.thumbneilView.width + 5, self.thumbneilView.height}}:
-                                                 (CGRect){{self.thumbneilView.x, self.thumbneilView.y},{self.thumbneilView.width + 5, self.thumbneilView.height}};
+        self.thumbneilView.frame = (self.isOn) ? (CGRect){{self.thumbneilView.x - 5, self.thumbneilView.y},
+												          {self.thumbneilView.width + 5, self.thumbneilView.height}}:
+                                                 (CGRect){{self.thumbneilView.x, self.thumbneilView.y},
+														  {self.thumbneilView.width + 5, self.thumbneilView.height}};
     }];
 }
 

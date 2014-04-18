@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OAuthLoginViewController : UIViewController
+@interface OAuthLoginViewController : BaseViewController
 
 @end

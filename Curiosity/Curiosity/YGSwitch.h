@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define kSwith_Padding 2
+#define kOff_State_Bg_Color [UIColor blueColor]
+
 @interface YGSwitch : UIControl
 
 @property (strong, nonatomic) UIColor *placeholderColor;

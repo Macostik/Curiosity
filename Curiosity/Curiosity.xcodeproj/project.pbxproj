@@ -16,7 +16,6 @@
 		CE0E03991901280D009D8C0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0E03971901280D009D8C0F /* Main.storyboard */; };
 		CE0E039C1901280D009D8C0F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E039B1901280D009D8C0F /* FirstViewController.m */; };
 		CE0E039F1901280D009D8C0F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E039E1901280D009D8C0F /* SecondViewController.m */; };
-		CE0E03A11901280D009D8C0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E03A01901280D009D8C0F /* Images.xcassets */; };
 		CE0E03A81901280D009D8C0F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03A71901280D009D8C0F /* XCTest.framework */; };
 		CE0E03A91901280D009D8C0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03851901280D009D8C0F /* Foundation.framework */; };
 		CE0E03AA1901280D009D8C0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03891901280D009D8C0F /* UIKit.framework */; };
@@ -29,6 +28,9 @@
 		CE0E03D619015C59009D8C0F /* UIResponder+YGFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03D519015C59009D8C0F /* UIResponder+YGFirstResponder.m */; };
 		CE0E03DD19015D6F009D8C0F /* YGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03DA19015D6F009D8C0F /* YGLabel.m */; };
 		CE0E03DE19015D6F009D8C0F /* YGSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03DC19015D6F009D8C0F /* YGSwitch.m */; };
+		CE0E03E8190169FA009D8C0F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03E7190169FA009D8C0F /* BaseViewController.m */; };
+		CE0E03ED19016F66009D8C0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E03EC19016F66009D8C0F /* Images.xcassets */; };
+		CE4B75611901751E00A3AC10 /* facebook_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4B75601901751E00A3AC10 /* facebook_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +59,6 @@
 		CE0E039B1901280D009D8C0F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		CE0E039D1901280D009D8C0F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		CE0E039E1901280D009D8C0F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		CE0E03A01901280D009D8C0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE0E03A61901280D009D8C0F /* CuriosityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuriosityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0E03A71901280D009D8C0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CE0E03AF1901280D009D8C0F /* CuriosityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CuriosityTests-Info.plist"; sourceTree = "<group>"; };
@@ -77,6 +78,10 @@
 		CE0E03DA19015D6F009D8C0F /* YGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGLabel.m; sourceTree = "<group>"; };
 		CE0E03DB19015D6F009D8C0F /* YGSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSwitch.h; sourceTree = "<group>"; };
 		CE0E03DC19015D6F009D8C0F /* YGSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSwitch.m; sourceTree = "<group>"; };
+		CE0E03E6190169FA009D8C0F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		CE0E03E7190169FA009D8C0F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		CE0E03EC19016F66009D8C0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE4B75601901751E00A3AC10 /* facebook_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +143,7 @@
 		CE0E038B1901280D009D8C0F /* Curiosity */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E03EE19016FD3009D8C0F /* Resourse */,
 				CE0E03D819015CD3009D8C0F /* ViewController */,
 				CE0E03D719015CC9009D8C0F /* View */,
 				CE0E03C719015AA3009D8C0F /* Categories */,
@@ -145,7 +151,6 @@
 				CE0E03941901280D009D8C0F /* AppDelegate.h */,
 				CE0E03951901280D009D8C0F /* AppDelegate.m */,
 				CE0E03971901280D009D8C0F /* Main.storyboard */,
-				CE0E03A01901280D009D8C0F /* Images.xcassets */,
 				CE0E038C1901280D009D8C0F /* Supporting Files */,
 			);
 			path = Curiosity;
@@ -158,6 +163,7 @@
 				CE0E038E1901280D009D8C0F /* InfoPlist.strings */,
 				CE0E03911901280D009D8C0F /* main.m */,
 				CE0E03931901280D009D8C0F /* Curiosity-Prefix.pch */,
+				CE0E03EC19016F66009D8C0F /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -221,8 +227,18 @@
 				CE0E039B1901280D009D8C0F /* FirstViewController.m */,
 				CE0E039D1901280D009D8C0F /* SecondViewController.h */,
 				CE0E039E1901280D009D8C0F /* SecondViewController.m */,
+				CE0E03E6190169FA009D8C0F /* BaseViewController.h */,
+				CE0E03E7190169FA009D8C0F /* BaseViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CE0E03EE19016FD3009D8C0F /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				CE4B75601901751E00A3AC10 /* facebook_logo.png */,
+			);
+			name = Resourse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,8 +317,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0E03A11901280D009D8C0F /* Images.xcassets in Resources */,
+				CE0E03ED19016F66009D8C0F /* Images.xcassets in Resources */,
 				CE0E03901901280D009D8C0F /* InfoPlist.strings in Resources */,
+				CE4B75611901751E00A3AC10 /* facebook_logo.png in Resources */,
 				CE0E03991901280D009D8C0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +341,7 @@
 			files = (
 				CE0E039F1901280D009D8C0F /* SecondViewController.m in Sources */,
 				CE0E03961901280D009D8C0F /* AppDelegate.m in Sources */,
+				CE0E03E8190169FA009D8C0F /* BaseViewController.m in Sources */,
 				CE0E03D319015BB7009D8C0F /* UIView+YGQuickFrame.m in Sources */,
 				CE0E03DE19015D6F009D8C0F /* YGSwitch.m in Sources */,
 				CE0E03CE19015AE2009D8C0F /* UIImage+ImageEffects.m in Sources */,
@@ -467,7 +485,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Curiosity/Curiosity-Prefix.pch";
 				INFOPLIST_FILE = "Curiosity/Curiosity-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -486,7 +504,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Curiosity/Curiosity-Prefix.pch";
 				INFOPLIST_FILE = "Curiosity/Curiosity-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

@@ -14,4 +14,10 @@
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
 	#import "Constants.h"
+
+    #import "BaseViewController.h"
+
+    #import "UIView+YGQuickFrame.h"
+	#import "UIResponder+YGFirstResponder.h"
+    #import "UIImage+ImageEffects.h"
 #endif
