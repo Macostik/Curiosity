@@ -12,7 +12,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+	NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:kAccessToken];
+    
+    NSString *controllerId = token ? @"TabBarID" : @"LoginID";
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+	UIViewController *initViewController = [storyboard instantiateViewControllerWithIdentifier:controllerId];
+    
+    if (token) {
+        [self.window setRootViewController:initViewController];
+    } else {
+        [(UINavigationController *)self.window.rootViewController pushViewController:initViewController
+																			animated:NO];
+	}
     return YES;
 }
 							

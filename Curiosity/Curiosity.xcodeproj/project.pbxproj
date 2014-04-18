@@ -22,7 +22,13 @@
 		CE0E03AA1901280D009D8C0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03891901280D009D8C0F /* UIKit.framework */; };
 		CE0E03B21901280D009D8C0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE0E03B01901280D009D8C0F /* InfoPlist.strings */; };
 		CE0E03B41901280D009D8C0F /* CuriosityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03B31901280D009D8C0F /* CuriosityTests.m */; };
-		CE0E03C01901304A009D8C0F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03BF1901304A009D8C0F /* LoginViewController.m */; };
+		CE0E03C01901304A009D8C0F /* OAuthLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03BF1901304A009D8C0F /* OAuthLoginViewController.m */; };
+		CE0E03C2190142CF009D8C0F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03C1190142CF009D8C0F /* FacebookSDK.framework */; };
+		CE0E03CE19015AE2009D8C0F /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03C919015AE2009D8C0F /* UIImage+ImageEffects.m */; };
+		CE0E03D319015BB7009D8C0F /* UIView+YGQuickFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03D219015BB7009D8C0F /* UIView+YGQuickFrame.m */; };
+		CE0E03D619015C59009D8C0F /* UIResponder+YGFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03D519015C59009D8C0F /* UIResponder+YGFirstResponder.m */; };
+		CE0E03DD19015D6F009D8C0F /* YGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03DA19015D6F009D8C0F /* YGLabel.m */; };
+		CE0E03DE19015D6F009D8C0F /* YGSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03DC19015D6F009D8C0F /* YGSwitch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +63,20 @@
 		CE0E03AF1901280D009D8C0F /* CuriosityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CuriosityTests-Info.plist"; sourceTree = "<group>"; };
 		CE0E03B11901280D009D8C0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE0E03B31901280D009D8C0F /* CuriosityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CuriosityTests.m; sourceTree = "<group>"; };
-		CE0E03BE1901304A009D8C0F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		CE0E03BF1901304A009D8C0F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CE0E03BE1901304A009D8C0F /* OAuthLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthLoginViewController.h; sourceTree = "<group>"; };
+		CE0E03BF1901304A009D8C0F /* OAuthLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthLoginViewController.m; sourceTree = "<group>"; };
+		CE0E03C1190142CF009D8C0F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		CE0E03C6190149A3009D8C0F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CE0E03C819015AE2009D8C0F /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		CE0E03C919015AE2009D8C0F /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		CE0E03D119015BB7009D8C0F /* UIView+YGQuickFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YGQuickFrame.h"; sourceTree = "<group>"; };
+		CE0E03D219015BB7009D8C0F /* UIView+YGQuickFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YGQuickFrame.m"; sourceTree = "<group>"; };
+		CE0E03D419015C59009D8C0F /* UIResponder+YGFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+YGFirstResponder.h"; sourceTree = "<group>"; };
+		CE0E03D519015C59009D8C0F /* UIResponder+YGFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+YGFirstResponder.m"; sourceTree = "<group>"; };
+		CE0E03D919015D6F009D8C0F /* YGLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLabel.h; sourceTree = "<group>"; };
+		CE0E03DA19015D6F009D8C0F /* YGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGLabel.m; sourceTree = "<group>"; };
+		CE0E03DB19015D6F009D8C0F /* YGSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSwitch.h; sourceTree = "<group>"; };
+		CE0E03DC19015D6F009D8C0F /* YGSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0E03881901280D009D8C0F /* CoreGraphics.framework in Frameworks */,
+				CE0E03C2190142CF009D8C0F /* FacebookSDK.framework in Frameworks */,
 				CE0E038A1901280D009D8C0F /* UIKit.framework in Frameworks */,
 				CE0E03861901280D009D8C0F /* Foundation.framework in Frameworks */,
 			);
@@ -107,6 +126,7 @@
 		CE0E03841901280D009D8C0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E03C1190142CF009D8C0F /* FacebookSDK.framework */,
 				CE0E03851901280D009D8C0F /* Foundation.framework */,
 				CE0E03871901280D009D8C0F /* CoreGraphics.framework */,
 				CE0E03891901280D009D8C0F /* UIKit.framework */,
@@ -118,16 +138,13 @@
 		CE0E038B1901280D009D8C0F /* Curiosity */ = {
 			isa = PBXGroup;
 			children = (
-				CE0E03BD1901283F009D8C0F /* iPad */,
+				CE0E03D819015CD3009D8C0F /* ViewController */,
+				CE0E03D719015CC9009D8C0F /* View */,
+				CE0E03C719015AA3009D8C0F /* Categories */,
+				CE0E03C419014954009D8C0F /* Constants */,
 				CE0E03941901280D009D8C0F /* AppDelegate.h */,
 				CE0E03951901280D009D8C0F /* AppDelegate.m */,
 				CE0E03971901280D009D8C0F /* Main.storyboard */,
-				CE0E03BE1901304A009D8C0F /* LoginViewController.h */,
-				CE0E03BF1901304A009D8C0F /* LoginViewController.m */,
-				CE0E039A1901280D009D8C0F /* FirstViewController.h */,
-				CE0E039B1901280D009D8C0F /* FirstViewController.m */,
-				CE0E039D1901280D009D8C0F /* SecondViewController.h */,
-				CE0E039E1901280D009D8C0F /* SecondViewController.m */,
 				CE0E03A01901280D009D8C0F /* Images.xcassets */,
 				CE0E038C1901280D009D8C0F /* Supporting Files */,
 			);
@@ -163,11 +180,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CE0E03BD1901283F009D8C0F /* iPad */ = {
+		CE0E03C419014954009D8C0F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E03C6190149A3009D8C0F /* Constants.h */,
 			);
-			name = iPad;
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		CE0E03C719015AA3009D8C0F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E03C819015AE2009D8C0F /* UIImage+ImageEffects.h */,
+				CE0E03C919015AE2009D8C0F /* UIImage+ImageEffects.m */,
+				CE0E03D119015BB7009D8C0F /* UIView+YGQuickFrame.h */,
+				CE0E03D219015BB7009D8C0F /* UIView+YGQuickFrame.m */,
+				CE0E03D419015C59009D8C0F /* UIResponder+YGFirstResponder.h */,
+				CE0E03D519015C59009D8C0F /* UIResponder+YGFirstResponder.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		CE0E03D719015CC9009D8C0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E03D919015D6F009D8C0F /* YGLabel.h */,
+				CE0E03DA19015D6F009D8C0F /* YGLabel.m */,
+				CE0E03DB19015D6F009D8C0F /* YGSwitch.h */,
+				CE0E03DC19015D6F009D8C0F /* YGSwitch.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CE0E03D819015CD3009D8C0F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E03BE1901304A009D8C0F /* OAuthLoginViewController.h */,
+				CE0E03BF1901304A009D8C0F /* OAuthLoginViewController.m */,
+				CE0E039A1901280D009D8C0F /* FirstViewController.h */,
+				CE0E039B1901280D009D8C0F /* FirstViewController.m */,
+				CE0E039D1901280D009D8C0F /* SecondViewController.h */,
+				CE0E039E1901280D009D8C0F /* SecondViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +324,14 @@
 			files = (
 				CE0E039F1901280D009D8C0F /* SecondViewController.m in Sources */,
 				CE0E03961901280D009D8C0F /* AppDelegate.m in Sources */,
+				CE0E03D319015BB7009D8C0F /* UIView+YGQuickFrame.m in Sources */,
+				CE0E03DE19015D6F009D8C0F /* YGSwitch.m in Sources */,
+				CE0E03CE19015AE2009D8C0F /* UIImage+ImageEffects.m in Sources */,
 				CE0E039C1901280D009D8C0F /* FirstViewController.m in Sources */,
+				CE0E03DD19015D6F009D8C0F /* YGLabel.m in Sources */,
 				CE0E03921901280D009D8C0F /* main.m in Sources */,
-				CE0E03C01901304A009D8C0F /* LoginViewController.m in Sources */,
+				CE0E03D619015C59009D8C0F /* UIResponder+YGFirstResponder.m in Sources */,
+				CE0E03C01901304A009D8C0F /* OAuthLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +460,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Curiosity/Curiosity-Prefix.pch";
 				INFOPLIST_FILE = "Curiosity/Curiosity-Info.plist";
@@ -415,6 +479,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Curiosity/Curiosity-Prefix.pch";
 				INFOPLIST_FILE = "Curiosity/Curiosity-Info.plist";
