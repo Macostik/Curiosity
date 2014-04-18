@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE0E03861901280D009D8C0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03851901280D009D8C0F /* Foundation.framework */; };
+		CE0E03881901280D009D8C0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03871901280D009D8C0F /* CoreGraphics.framework */; };
+		CE0E038A1901280D009D8C0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03891901280D009D8C0F /* UIKit.framework */; };
+		CE0E03901901280D009D8C0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE0E038E1901280D009D8C0F /* InfoPlist.strings */; };
+		CE0E03921901280D009D8C0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03911901280D009D8C0F /* main.m */; };
+		CE0E03961901280D009D8C0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03951901280D009D8C0F /* AppDelegate.m */; };
+		CE0E03991901280D009D8C0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0E03971901280D009D8C0F /* Main.storyboard */; };
+		CE0E039C1901280D009D8C0F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E039B1901280D009D8C0F /* FirstViewController.m */; };
+		CE0E039F1901280D009D8C0F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E039E1901280D009D8C0F /* SecondViewController.m */; };
+		CE0E03A11901280D009D8C0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E03A01901280D009D8C0F /* Images.xcassets */; };
+		CE0E03A81901280D009D8C0F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03A71901280D009D8C0F /* XCTest.framework */; };
+		CE0E03A91901280D009D8C0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03851901280D009D8C0F /* Foundation.framework */; };
+		CE0E03AA1901280D009D8C0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0E03891901280D009D8C0F /* UIKit.framework */; };
+		CE0E03B21901280D009D8C0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE0E03B01901280D009D8C0F /* InfoPlist.strings */; };
+		CE0E03B41901280D009D8C0F /* CuriosityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03B31901280D009D8C0F /* CuriosityTests.m */; };
+		CE0E03C01901304A009D8C0F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03BF1901304A009D8C0F /* LoginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE0E03AB1901280D009D8C0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0E037A1901280D009D8C0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE0E03811901280D009D8C0F;
+			remoteInfo = Curiosity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE0E03821901280D009D8C0F /* Curiosity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curiosity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0E03851901280D009D8C0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE0E03871901280D009D8C0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE0E03891901280D009D8C0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE0E038D1901280D009D8C0F /* Curiosity-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Curiosity-Info.plist"; sourceTree = "<group>"; };
+		CE0E038F1901280D009D8C0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE0E03911901280D009D8C0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE0E03931901280D009D8C0F /* Curiosity-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Curiosity-Prefix.pch"; sourceTree = "<group>"; };
+		CE0E03941901280D009D8C0F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE0E03951901280D009D8C0F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE0E03981901280D009D8C0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE0E039A1901280D009D8C0F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		CE0E039B1901280D009D8C0F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		CE0E039D1901280D009D8C0F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		CE0E039E1901280D009D8C0F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		CE0E03A01901280D009D8C0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE0E03A61901280D009D8C0F /* CuriosityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuriosityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0E03A71901280D009D8C0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CE0E03AF1901280D009D8C0F /* CuriosityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CuriosityTests-Info.plist"; sourceTree = "<group>"; };
+		CE0E03B11901280D009D8C0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE0E03B31901280D009D8C0F /* CuriosityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CuriosityTests.m; sourceTree = "<group>"; };
+		CE0E03BE1901304A009D8C0F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CE0E03BF1901304A009D8C0F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE0E037F1901280D009D8C0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0E03881901280D009D8C0F /* CoreGraphics.framework in Frameworks */,
+				CE0E038A1901280D009D8C0F /* UIKit.framework in Frameworks */,
+				CE0E03861901280D009D8C0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0E03A31901280D009D8C0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0E03A81901280D009D8C0F /* XCTest.framework in Frameworks */,
+				CE0E03AA1901280D009D8C0F /* UIKit.framework in Frameworks */,
+				CE0E03A91901280D009D8C0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE0E03791901280D009D8C0F = {
+			isa = PBXGroup;
+			children = (
+				CE0E038B1901280D009D8C0F /* Curiosity */,
+				CE0E03AD1901280D009D8C0F /* CuriosityTests */,
+				CE0E03841901280D009D8C0F /* Frameworks */,
+				CE0E03831901280D009D8C0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE0E03831901280D009D8C0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E03821901280D009D8C0F /* Curiosity.app */,
+				CE0E03A61901280D009D8C0F /* CuriosityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE0E03841901280D009D8C0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E03851901280D009D8C0F /* Foundation.framework */,
+				CE0E03871901280D009D8C0F /* CoreGraphics.framework */,
+				CE0E03891901280D009D8C0F /* UIKit.framework */,
+				CE0E03A71901280D009D8C0F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE0E038B1901280D009D8C0F /* Curiosity */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E03BD1901283F009D8C0F /* iPad */,
+				CE0E03941901280D009D8C0F /* AppDelegate.h */,
+				CE0E03951901280D009D8C0F /* AppDelegate.m */,
+				CE0E03971901280D009D8C0F /* Main.storyboard */,
+				CE0E03BE1901304A009D8C0F /* LoginViewController.h */,
+				CE0E03BF1901304A009D8C0F /* LoginViewController.m */,
+				CE0E039A1901280D009D8C0F /* FirstViewController.h */,
+				CE0E039B1901280D009D8C0F /* FirstViewController.m */,
+				CE0E039D1901280D009D8C0F /* SecondViewController.h */,
+				CE0E039E1901280D009D8C0F /* SecondViewController.m */,
+				CE0E03A01901280D009D8C0F /* Images.xcassets */,
+				CE0E038C1901280D009D8C0F /* Supporting Files */,
+			);
+			path = Curiosity;
+			sourceTree = "<group>";
+		};
+		CE0E038C1901280D009D8C0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E038D1901280D009D8C0F /* Curiosity-Info.plist */,
+				CE0E038E1901280D009D8C0F /* InfoPlist.strings */,
+				CE0E03911901280D009D8C0F /* main.m */,
+				CE0E03931901280D009D8C0F /* Curiosity-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE0E03AD1901280D009D8C0F /* CuriosityTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E03B31901280D009D8C0F /* CuriosityTests.m */,
+				CE0E03AE1901280D009D8C0F /* Supporting Files */,
+			);
+			path = CuriosityTests;
+			sourceTree = "<group>";
+		};
+		CE0E03AE1901280D009D8C0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E03AF1901280D009D8C0F /* CuriosityTests-Info.plist */,
+				CE0E03B01901280D009D8C0F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE0E03BD1901283F009D8C0F /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE0E03811901280D009D8C0F /* Curiosity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0E03B71901280D009D8C0F /* Build configuration list for PBXNativeTarget "Curiosity" */;
+			buildPhases = (
+				CE0E037E1901280D009D8C0F /* Sources */,
+				CE0E037F1901280D009D8C0F /* Frameworks */,
+				CE0E03801901280D009D8C0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Curiosity;
+			productName = Curiosity;
+			productReference = CE0E03821901280D009D8C0F /* Curiosity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE0E03A51901280D009D8C0F /* CuriosityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0E03BA1901280D009D8C0F /* Build configuration list for PBXNativeTarget "CuriosityTests" */;
+			buildPhases = (
+				CE0E03A21901280D009D8C0F /* Sources */,
+				CE0E03A31901280D009D8C0F /* Frameworks */,
+				CE0E03A41901280D009D8C0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE0E03AC1901280D009D8C0F /* PBXTargetDependency */,
+			);
+			name = CuriosityTests;
+			productName = CuriosityTests;
+			productReference = CE0E03A61901280D009D8C0F /* CuriosityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE0E037A1901280D009D8C0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Yuriy Granchenko";
+				TargetAttributes = {
+					CE0E03A51901280D009D8C0F = {
+						TestTargetID = CE0E03811901280D009D8C0F;
+					};
+				};
+			};
+			buildConfigurationList = CE0E037D1901280D009D8C0F /* Build configuration list for PBXProject "Curiosity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE0E03791901280D009D8C0F;
+			productRefGroup = CE0E03831901280D009D8C0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE0E03811901280D009D8C0F /* Curiosity */,
+				CE0E03A51901280D009D8C0F /* CuriosityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE0E03801901280D009D8C0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0E03A11901280D009D8C0F /* Images.xcassets in Resources */,
+				CE0E03901901280D009D8C0F /* InfoPlist.strings in Resources */,
+				CE0E03991901280D009D8C0F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0E03A41901280D009D8C0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0E03B21901280D009D8C0F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE0E037E1901280D009D8C0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0E039F1901280D009D8C0F /* SecondViewController.m in Sources */,
+				CE0E03961901280D009D8C0F /* AppDelegate.m in Sources */,
+				CE0E039C1901280D009D8C0F /* FirstViewController.m in Sources */,
+				CE0E03921901280D009D8C0F /* main.m in Sources */,
+				CE0E03C01901304A009D8C0F /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0E03A21901280D009D8C0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0E03B41901280D009D8C0F /* CuriosityTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE0E03AC1901280D009D8C0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE0E03811901280D009D8C0F /* Curiosity */;
+			targetProxy = CE0E03AB1901280D009D8C0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE0E038E1901280D009D8C0F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE0E038F1901280D009D8C0F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE0E03971901280D009D8C0F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE0E03981901280D009D8C0F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE0E03B01901280D009D8C0F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE0E03B11901280D009D8C0F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE0E03B51901280D009D8C0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE0E03B61901280D009D8C0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE0E03B81901280D009D8C0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Curiosity/Curiosity-Prefix.pch";
+				INFOPLIST_FILE = "Curiosity/Curiosity-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE0E03B91901280D009D8C0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Curiosity/Curiosity-Prefix.pch";
+				INFOPLIST_FILE = "Curiosity/Curiosity-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CE0E03BB1901280D009D8C0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Curiosity.app/Curiosity";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Curiosity/Curiosity-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CuriosityTests/CuriosityTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CE0E03BC1901280D009D8C0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Curiosity.app/Curiosity";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Curiosity/Curiosity-Prefix.pch";
+				INFOPLIST_FILE = "CuriosityTests/CuriosityTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE0E037D1901280D009D8C0F /* Build configuration list for PBXProject "Curiosity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0E03B51901280D009D8C0F /* Debug */,
+				CE0E03B61901280D009D8C0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0E03B71901280D009D8C0F /* Build configuration list for PBXNativeTarget "Curiosity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0E03B81901280D009D8C0F /* Debug */,
+				CE0E03B91901280D009D8C0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0E03BA1901280D009D8C0F /* Build configuration list for PBXNativeTarget "CuriosityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0E03BB1901280D009D8C0F /* Debug */,
+				CE0E03BC1901280D009D8C0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE0E037A1901280D009D8C0F /* Project object */;
+}
