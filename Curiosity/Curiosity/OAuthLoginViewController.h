@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^CompletionBlock)(NSData *data, NSURLResponse *response, NSError *error);
+
 @interface OAuthLoginViewController : BaseViewController
+
+@property (strong, nonatomic) CompletionBlock completionBlock;
 
 @end

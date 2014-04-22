@@ -17,9 +17,11 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #endif
 
 #define isSevenVersionSDK !(floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
-
 #define noInternetConnection ([[Reachability reachabilityForInternetConnection] isReachable] == NotReachable)
+#define kApplicationDocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
-#define kAccessToken @"accessToken"
+#define kAccessTokenKey @"com.facebook.sdk:TokenInformationTokenKey"
+#define kRequestedPermissions @[@"basic_info"]
+#define kFilename @"TokenInfo.plist"
 
 #endif

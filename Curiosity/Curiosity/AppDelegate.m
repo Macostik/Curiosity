@@ -10,23 +10,35 @@
 
 @implementation AppDelegate
 
++ (instancetype)instance {
+    static AppDelegate *appDelegate = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        appDelegate = [[self alloc] init];
+    });
+    
+    return appDelegate;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:kAccessToken];
-    
-    NSString *controllerId = token ? @"TabBarID" : @"LoginID";
+	NSDictionary *token = [CachingAppToken readData];
+    NSString *controllerId = nil ? @"TabBarID" : @"LoginID";
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 	UIViewController *initViewController = [storyboard instantiateViewControllerWithIdentifier:controllerId];
     
     if (token) {
         [self.window setRootViewController:initViewController];
     } else {
-        [(UINavigationController *)self.window.rootViewController pushViewController:initViewController
-																			animated:NO];
+        [[self rootViewController] pushViewController:initViewController animated:NO];
 	}
     return YES;
 }
-							
+
+- (UINavigationController *)rootViewController {
+	return (UINavigationController *)self.window.rootViewController;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -52,6 +64,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+	return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
 
 @end

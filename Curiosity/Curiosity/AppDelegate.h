@@ -12,4 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (instancetype)instance;
+- (UINavigationController *)rootViewController;
+
 @end
