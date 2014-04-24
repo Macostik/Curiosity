@@ -10,10 +10,10 @@
 #define Curiosity_Constants_h
 
 #if TARGET_IPHONE_SIMULATOR
-#define JMLog( s, ... ) NSLog( @"[%@:%d] %@", [[NSString stringWithUTF8String:__FILE__] \
+#define YGLog( s, ... ) NSLog( @"[%@:%d] %@", [[NSString stringWithUTF8String:__FILE__] \
 lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #else
-#define JMLog( s, ... )
+#define YGLog( s, ... ) NSLog( @"%@", [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #endif
 
 #define isSevenVersionSDK !(floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
@@ -23,5 +23,7 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #define kAccessTokenKey @"com.facebook.sdk:TokenInformationTokenKey"
 #define kRequestedPermissions @[@"basic_info"]
 #define kFilename @"TokenInfo.plist"
+#define kTabBarControlIdentity @"TabBarID"
+#define kLogControlIdentity @"LoginID"
 
 #endif

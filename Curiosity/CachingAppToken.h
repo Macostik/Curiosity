@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSString *thirdPartySessionId;
 
 + (NSDictionary *)readData;
++ (void)writeData:(NSDictionary *)data;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  FriendsViewController.h
 //  Curiosity
 //
 //  Created by Yuriy Granchenko on 18.04.14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : BaseViewController
+@interface FriendsViewController : BaseTableViewController
 
 @end

@@ -10,10 +10,10 @@
 #import "CachingAppToken.h"
 
 @interface OAuthLoginViewController () {
-	
 	IBOutlet UIImageView *placeholderImageView;
+	IBOutlet UIButton *loginButton;
 	CachingAppToken *tokenCaching;
-	
+	FBSession *fbSession;
 }
 
 @end
@@ -36,12 +36,25 @@
 -(void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	self.navigationController.navigationBar.hidden = YES;
-	UIImage *blurImage = [UIImage imageNamed:@"facebook_logo"];
-	UIColor *tintColor = [UIColor colorWithRed:20/255.0f green:70/255.0f blue:200/255.0f alpha:0.2f];
-	placeholderImageView.image = [blurImage applyBlurWithRadius:12.0 tintColor:tintColor saturationDeltaFactor:0.7 maskImage:nil];
 	
-	placeholderImageView.frame = CGRectInset(self.view.frame, -50.f, -100.f);
-	[self addMotionEffectToView:placeholderImageView magnitude:50];
+	UIImage *blurImage = [UIImage imageNamed:@"Logo"];
+	UIColor *tintColor = [UIColor colorWithRed:20/255.0f green:70/255.0f blue:200/255.0f alpha:0.2f];
+	placeholderImageView.image = [blurImage applyBlurWithRadius:5.0f tintColor:tintColor saturationDeltaFactor:0.9f maskImage:nil];
+	
+	placeholderImageView.frame = CGRectInset(placeholderImageView.frame, -20.f, -20.0f);
+	[self addMotionEffectToView:placeholderImageView magnitude:20];
+	
+	loginButton.layer.cornerRadius = 7.0f;
+	loginButton.layer.borderWidth = 1.0f;
+	loginButton.layer.borderColor = loginButton.titleLabel.textColor.CGColor;
+	
+	loginButton.alpha = .0f;
+	loginButton.y = CGRectGetMaxY(self.view.frame);
+	
+	[UIView animateWithDuration:.5f delay:.33f usingSpringWithDamping:.4f initialSpringVelocity:.0f options:UIViewAnimationOptionCurveLinear animations:^{
+		loginButton.alpha = 1.0f;
+		loginButton.y = 300;
+	} completion:nil];
 }
 
 - (void)addMotionEffectToView:(UIView*)view  magnitude:(float)magnitude {
@@ -61,8 +74,53 @@
     [view addMotionEffect:group];
 }
 
+#pragma mark - Login Facebook
+
 -(IBAction)login:(id)sender {
 	[self openSessionWithAllowLoginUI:YES];
+}
+
+- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI {
+
+#if TARGET_IPHONE_SIMULATOR
+    if (!tokenCaching) {
+        tokenCaching = [[CachingAppToken alloc] init];
+        [tokenCaching setThirdPartySessionId:@"55555555"];
+    }
+
+	fbSession = [[FBSession alloc] initWithAppID:nil
+                                              permissions:kRequestedPermissions
+                                          urlSchemeSuffix:nil
+                                       tokenCacheStrategy:tokenCaching];
+	
+    if (allowLoginUI || fbSession.state == FBSessionStateCreatedTokenLoaded) {
+        if (fbSession.state == FBSessionStateCreatedTokenLoaded) {
+            YGLog(@"Cached token found.");
+        }
+        [FBSession setActiveSession:fbSession];
+		
+        [fbSession openWithBehavior:FBSessionLoginBehaviorWithNoFallbackToWebView
+				  completionHandler:^(FBSession *session,FBSessionState state, NSError *error) {
+					  [self sessionStateChanged:session
+										  state:state
+										  error:error];
+				  }];
+    }
+#else
+	if (FBSession.activeSession.state == FBSessionStateOpen
+		|| FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
+		[self closeSession];
+	} else if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+		[CachingAppToken writeData:[[[FBSession activeSession] accessTokenData] dictionary]];
+		[self sessionStateChanged:FBSession.activeSession state:FBSession.activeSession.state error:nil];
+	} else {
+		[[FBSession activeSession] openWithBehavior:FBSessionLoginBehaviorWithFallbackToWebView
+								  completionHandler:^(FBSession *session, FBSessionState state, NSError *error)  {
+									  [self sessionStateChanged:session state:state error:error];
+								  }];
+	}
+#endif
+    return fbSession.isOpen;
 }
 
 - (void)sessionStateChanged:(FBSession *)session
@@ -71,73 +129,30 @@
 {
     switch (state) {
         case FBSessionStateOpen:
+		case FBSessionStateCreatedTokenLoaded:
             if (!error) {
-				[FBRequestConnection startWithGraphPath:@"/me/friends"
-											 parameters:nil
-											 HTTPMethod:@"GET"
-									  completionHandler:^(
-														  FBRequestConnection *connection,
-														  id result,
-														  NSError *error
-														  ) {
-										  /* handle the result */
-									  }];
+				UIViewController *initViewController = [AppDelegate initViewController:kTabBarControlIdentity];
+				[[[UIApplication sharedApplication] keyWindow] setRootViewController:initViewController];
             }
             break;
         case FBSessionStateClosed:
         case FBSessionStateClosedLoginFailed:
-            [FBSession.activeSession closeAndClearTokenInformation];
+            [self closeSession];
             break;
         default:
             break;
     }
-    
     if (error) {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Error"
-                                  message:error.localizedDescription
-                                  delegate:nil
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
+		[[[UIAlertView alloc]initWithTitle:@"Error"
+								   message:error.localizedDescription
+								  delegate:nil
+						 cancelButtonTitle:@"OK"
+						 otherButtonTitles:nil] show];
     }
 }
 
-- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI {
-    BOOL openSessionResult = NO;
-	
-    if (!tokenCaching) {
-        tokenCaching = [[CachingAppToken alloc] init];
-        [tokenCaching setThirdPartySessionId:@"55555555"];
-    }
-	
-    FBSession *session = [[FBSession alloc] initWithAppID:nil
-                                              permissions:kRequestedPermissions
-                                          urlSchemeSuffix:nil
-                                       tokenCacheStrategy:tokenCaching];
-    if (allowLoginUI || session.state == FBSessionStateCreatedTokenLoaded) {
-        if (session.state == FBSessionStateCreatedTokenLoaded) {
-            NSLog(@"Cached token found.");
-        }
-        [FBSession setActiveSession:session];
-   
-        [session openWithBehavior:FBSessionLoginBehaviorWithFallbackToWebView
-                completionHandler:^(FBSession *session,
-                                    FBSessionState state,
-                                    NSError *error) {
-                    [self sessionStateChanged:session
-                                        state:state
-                                        error:error];
-                }];
- 
-        openSessionResult = session.isOpen;
-    }
-    return openSessionResult;
-}
-
-- (void) closeSession {
+- (void)closeSession {
     [FBSession.activeSession closeAndClearTokenInformation];
 }
-
 
 @end

@@ -29,9 +29,8 @@
 - (FBAccessTokenData *)fetchFBAccessTokenData {
     if ([CachingAppToken readData]) {
         return nil;
-    } else {
-        return [FBAccessTokenData createTokenFromDictionary:@{}.mutableCopy];
     }
+	return [FBAccessTokenData createTokenFromDictionary:@{}.mutableCopy];
 }
 
 - (void)clearToken {
@@ -45,7 +44,7 @@
 
 + (void)writeData:(NSDictionary *)data {
     if (![data writeToFile:[CachingAppToken cachingFilePath] atomically:YES]) {
-        NSLog(@"Error writing to file");
+		YGLog(@"Error writing to file");
     }
 }
 

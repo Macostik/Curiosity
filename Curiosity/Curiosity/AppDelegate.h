@@ -11,8 +11,9 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) FBSession *session;
 
 + (instancetype)instance;
-- (UINavigationController *)rootViewController;
++ (UIViewController *)initViewController:(NSString *)controllerID;
 
 @end
