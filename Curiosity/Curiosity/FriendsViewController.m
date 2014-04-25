@@ -20,13 +20,20 @@
 
 @implementation FriendsViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
--(void)viewWillAppear:(BOOL)animated {
+-(void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
 	[self allFriend];
 	[HUD showUIBlockingIndicatorWithText:@"Loading..."];
+	
+	if ([self.tableView respondsToSelector:@selector(separatorInset)]) {
+		self.tableView.separatorInset = UIEdgeInsetsMake(0, 100, 0, 0);
+		self.tableView.separatorColor = kBaseColor;
+	}
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	
 }
 
 #pragma mark - UITableViewDelegate methods
@@ -40,31 +47,33 @@
 	if (cell == nil) {
 		cell = [tableView dequeueReusableCellWithIdentifier:@"friendsCell"];
 	}
-	[self fillContentCell:cell withIndexPath:indexPath];
+	[self fillContentTableView:tableView withIndexPath:indexPath];
 	return [cell heightForRowAtIndexPath:indexPath];
 }
 
-- (void)fillContentCell:(FriendTableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath {
+- (id)fillContentTableView:(UITableView *)tableView withIndexPath:(NSIndexPath *)indexPath {
+	
+	static NSString *identifier = @"friendsCell";
+    FriendTableViewCell *friendcell = [tableView dequeueReusableCellWithIdentifier:identifier];
+	
 	friendsModel = friendsArray[indexPath.row];
-	cell.id_Label.text = [NSString stringWithFormat:@"%i", friendsModel.id];
-	cell.nameLabel.text  = friendsModel.name;
-	[cell.thumbnailImageView setImageWithURL:friendsModel.thumbnail];
+	friendcell.nameLabel.textColor = kBaseColor;
+	friendcell.nameLabel.text  = friendsModel.name;
+	friendcell.linkLabel.text = friendsModel.link.absoluteString;
+	friendcell.linkLabel.textColor = kBaseColor;
+	[friendcell.thumbnailImageView setImageWithURL:friendsModel.thumbnail];
+	
+	return friendcell;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"friendsCell";
-    FriendTableViewCell *friendcell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-	
-	[self fillContentCell:friendcell withIndexPath:indexPath];
-	
-    return friendcell;
-}
+#pragma mark - Content data
 
 - (void)refreshDataContent {
 	[self allFriend];
 }
 
 - (void)allFriend {
+	
 	[FacebookHelper friendList:^(FBRequestConnection *connection, NSDictionary *result, NSError *error) {
 		if (!error) {
 			dispatch_async(dispatch_get_main_queue(), ^{

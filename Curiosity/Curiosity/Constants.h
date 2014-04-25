@@ -25,5 +25,6 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #define kFilename @"TokenInfo.plist"
 #define kTabBarControlIdentity @"TabBarID"
 #define kLogControlIdentity @"LoginID"
+#define kBaseColor [UIColor colorWithRed:34.0f/255.0f green:201.0f/255.0f blue:238.0f/255.0f alpha:1.0f]
 
 #endif

@@ -49,6 +49,7 @@
 		CE205584190A79810004BB5F /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CE205538190A79810004BB5F /* UIImageView+AFNetworking.m */; };
 		CE205585190A79810004BB5F /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CE20553B190A79810004BB5F /* UIProgressView+AFNetworking.m */; };
 		CE205586190A79810004BB5F /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CE20553D190A79810004BB5F /* UIWebView+AFNetworking.m */; };
+		CE205595190A8D920004BB5F /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CE205594190A8D920004BB5F /* UIColor+CustomColors.m */; };
 		CE2A599319095170004CCB68 /* FriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A599219095170004CCB68 /* FriendsModel.m */; };
 		CE2A599619095948004CCB68 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A599519095948004CCB68 /* BaseTableViewCell.m */; };
 		CE2A599919095988004CCB68 /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A599819095988004CCB68 /* FriendTableViewCell.m */; };
@@ -156,6 +157,8 @@
 		CE20553B190A79810004BB5F /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		CE20553C190A79810004BB5F /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		CE20553D190A79810004BB5F /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		CE205593190A8D920004BB5F /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		CE205594190A8D920004BB5F /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		CE2A599119095170004CCB68 /* FriendsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsModel.h; sourceTree = "<group>"; };
 		CE2A599219095170004CCB68 /* FriendsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsModel.m; sourceTree = "<group>"; };
 		CE2A599419095948004CCB68 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 		CE0E03C719015AA3009D8C0F /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CE205593190A8D920004BB5F /* UIColor+CustomColors.h */,
+				CE205594190A8D920004BB5F /* UIColor+CustomColors.m */,
 				CE0E03C819015AE2009D8C0F /* UIImage+ImageEffects.h */,
 				CE0E03C919015AE2009D8C0F /* UIImage+ImageEffects.m */,
 				CE0E03D119015BB7009D8C0F /* UIView+YGQuickFrame.h */,
@@ -631,6 +636,7 @@
 				CE2BC3671907BB13009D25EB /* JSONModelError.m in Sources */,
 				CE205540190A79810004BB5F /* AFHTTPRequestOperation.m in Sources */,
 				CE0E03DE19015D6F009D8C0F /* YGSwitch.m in Sources */,
+				CE205595190A8D920004BB5F /* UIColor+CustomColors.m in Sources */,
 				CE205545190A79810004BB5F /* AFURLConnectionOperation.m in Sources */,
 				CE2A599619095948004CCB68 /* BaseTableViewCell.m in Sources */,
 				CE0E03CE19015AE2009D8C0F /* UIImage+ImageEffects.m in Sources */,

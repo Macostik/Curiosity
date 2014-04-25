@@ -31,4 +31,5 @@
     #import "UIView+YGQuickFrame.h"
 	#import "UIResponder+YGFirstResponder.h"
     #import "UIImage+ImageEffects.h"
+	#import "UIColor+CustomColors.h"
 #endif

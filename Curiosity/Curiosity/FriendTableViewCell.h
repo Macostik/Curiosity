@@ -11,8 +11,8 @@
 @interface FriendTableViewCell : BaseTableViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *thumbnailImageView;
-@property (strong, nonatomic) IBOutlet YGLabel *id_Label;
 @property (strong, nonatomic) IBOutlet YGLabel *nameLabel;
+@property (strong, nonatomic) IBOutlet YGLabel *linkLabel;
 
 @end
 

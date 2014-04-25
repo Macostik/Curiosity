@@ -10,4 +10,6 @@
 
 @interface BaseTableViewController : UITableViewController
 
+- (id)fillContentTableView:(UITableView *)tableView withIndexPath:(NSIndexPath *)indexPath;
+
 @end

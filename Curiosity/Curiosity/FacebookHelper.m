@@ -26,8 +26,8 @@
     return facebookHelper;
 }
 
-+(void)friendList:(CompletionHandler)completionHandler {
-	[FBRequestConnection startWithGraphPath:@"/me/friends?fields=name,gender,link,location,picture.height(500).width(500)"
++ (void)friendList:(CompletionHandler)completionHandler {
+	[FBRequestConnection startWithGraphPath:@"/me/friends?fields=name,gender,link,location,picture.height(120).width(120)"
 								 parameters:nil
 								 HTTPMethod:@"GET"
 						  completionHandler:completionHandler];
