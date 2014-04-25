@@ -39,7 +39,10 @@
 	
 	UIImage *blurImage = [UIImage imageNamed:@"Logo"];
 	UIColor *tintColor = [UIColor colorWithRed:20/255.0f green:70/255.0f blue:200/255.0f alpha:0.2f];
-	placeholderImageView.image = [blurImage applyBlurWithRadius:5.0f tintColor:tintColor saturationDeltaFactor:0.9f maskImage:nil];
+	placeholderImageView.image = [blurImage applyBlurWithRadius:5.0f
+													  tintColor:tintColor
+										  saturationDeltaFactor:0.9f
+													  maskImage:nil];
 	
 	placeholderImageView.frame = CGRectInset(placeholderImageView.frame, -20.f, -20.0f);
 	[self addMotionEffectToView:placeholderImageView magnitude:20];
@@ -49,22 +52,29 @@
 	loginButton.layer.borderColor = loginButton.titleLabel.textColor.CGColor;
 	
 	loginButton.alpha = .0f;
-	loginButton.y = CGRectGetMaxY(self.view.frame);
+	loginButton.transform = CGAffineTransformTranslate(loginButton.transform, 0, CGRectGetMaxY(self.view.frame));
 	
-	[UIView animateWithDuration:.5f delay:.33f usingSpringWithDamping:.4f initialSpringVelocity:.0f options:UIViewAnimationOptionCurveLinear animations:^{
-		loginButton.alpha = 1.0f;
-		loginButton.y = 300;
+	[UIView animateWithDuration:.5f
+						  delay:.33f
+		 usingSpringWithDamping:.4f
+		  initialSpringVelocity:.0f
+						options:UIViewAnimationOptionCurveLinear
+					 animations:^{
+						 loginButton.alpha = 1.0f;
+						 loginButton.transform = CGAffineTransformIdentity;
 	} completion:nil];
 }
 
 - (void)addMotionEffectToView:(UIView*)view  magnitude:(float)magnitude {
-    UIInterpolatingMotionEffect* xMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x"
-                                                                                           type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    UIInterpolatingMotionEffect* xMotion = [[UIInterpolatingMotionEffect alloc]
+											initWithKeyPath:@"center.x"
+											type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
     xMotion.minimumRelativeValue = @(-magnitude);
     xMotion.maximumRelativeValue = @(magnitude);
     
-    UIInterpolatingMotionEffect* yMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y"
-                                                                                           type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    UIInterpolatingMotionEffect* yMotion = [[UIInterpolatingMotionEffect alloc]
+											initWithKeyPath:@"center.y"
+											type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
     yMotion.minimumRelativeValue = @(-magnitude);
     yMotion.maximumRelativeValue = @(magnitude);
     
@@ -99,7 +109,7 @@
         }
         [FBSession setActiveSession:fbSession];
 		
-        [fbSession openWithBehavior:FBSessionLoginBehaviorWithNoFallbackToWebView
+        [fbSession openWithBehavior:FBSessionLoginBehaviorWithFallbackToWebView
 				  completionHandler:^(FBSession *session,FBSessionState state, NSError *error) {
 					  [self sessionStateChanged:session
 										  state:state

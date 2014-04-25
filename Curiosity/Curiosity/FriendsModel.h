@@ -10,7 +10,10 @@
 
 @interface FriendsModel : JSONModel
 
-@property (strong, nonatomic) NSString *name;
 @property (assign, nonatomic) int id;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *gender;
+@property (strong, nonatomic) NSURL *link;
+@property (strong, nonatomic) NSURL *thumbnail;
 
 @end

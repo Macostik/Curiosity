@@ -27,7 +27,13 @@
 	UIViewController *initViewController = [AppDelegate initViewController:controllerID];
     
     if (token[kAccessTokenKey]) {
-        [self.window setRootViewController:initViewController];
+		if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+			[FBSession openActiveSessionWithReadPermissions:kRequestedPermissions
+											   allowLoginUI:NO
+										  completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+											  [self.window setRootViewController:initViewController];
+										  }];
+		}
     } else {
         [(UINavigationController *)self.window.rootViewController pushViewController:initViewController animated:NO];
 	}

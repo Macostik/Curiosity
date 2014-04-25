@@ -21,10 +21,13 @@
     #import "BaseViewController.h"
 	#import "BaseTableViewController.h"
 	#import "CachingAppToken.h"
+	#import "HUD.h"
+	#import "AFNetworking.h"
 
 	#import "YGLabel.h"
     #import "YGSwitch.h"
 
+    #import "UIImageView+AFNetworking.h"
     #import "UIView+YGQuickFrame.h"
 	#import "UIResponder+YGFirstResponder.h"
     #import "UIImage+ImageEffects.h"

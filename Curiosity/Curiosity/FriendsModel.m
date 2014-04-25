@@ -10,4 +10,8 @@
 
 @implementation FriendsModel
 
++(JSONKeyMapper*)keyMapper {
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"picture.data.url":@"thumbnail"}];
+}
+
 @end

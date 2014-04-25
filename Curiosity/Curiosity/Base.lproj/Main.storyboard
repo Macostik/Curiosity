@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="friendsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="70" id="nhK-0t-qHz" customClass="FriendTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="friendsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsCell" rowHeight="70" id="nhK-0t-qHz" customClass="FriendTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nhK-0t-qHz" id="1Dk-eo-BTS">
@@ -28,17 +28,17 @@
                                                 <constraint firstAttribute="width" constant="76" id="f2Q-5Y-lt3"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05Q-av-vkz" userLabel="Label - ID" customClass="YGLabel">
-                                            <rect key="frame" x="119" y="11" width="42" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05Q-av-vkz" userLabel="Label - ID" customClass="YGLabel">
+                                            <rect key="frame" x="119" y="11" width="36" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYe-26-S5h" userLabel="Label - Name" customClass="YGLabel">
-                                            <rect key="frame" x="119" y="33" width="42" height="21"/>
+                                            <rect key="frame" x="119" y="37" width="36" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -46,7 +46,8 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="RYe-26-S5h" secondAttribute="bottom" constant="15" id="0f6-Lz-bnK"/>
                                         <constraint firstItem="RYe-26-S5h" firstAttribute="leading" secondItem="k7g-Do-zcC" secondAttribute="trailing" constant="23" id="DId-VA-ro2"/>
-                                        <constraint firstItem="RYe-26-S5h" firstAttribute="top" secondItem="05Q-av-vkz" secondAttribute="bottom" constant="1" id="Q4v-Ex-oYy"/>
+                                        <constraint firstItem="RYe-26-S5h" firstAttribute="top" secondItem="05Q-av-vkz" secondAttribute="bottom" constant="8" id="Q4v-Ex-oYy"/>
+                                        <constraint firstItem="05Q-av-vkz" firstAttribute="top" secondItem="1Dk-eo-BTS" secondAttribute="top" constant="11" id="Qmz-Jj-1Cp"/>
                                         <constraint firstItem="k7g-Do-zcC" firstAttribute="leading" secondItem="1Dk-eo-BTS" secondAttribute="leading" constant="20" id="ShL-yr-r8e"/>
                                         <constraint firstItem="RYe-26-S5h" firstAttribute="leading" secondItem="05Q-av-vkz" secondAttribute="leading" id="mXq-JE-t6L"/>
                                         <constraint firstAttribute="bottom" secondItem="k7g-Do-zcC" secondAttribute="bottom" id="q84-6o-1iY"/>

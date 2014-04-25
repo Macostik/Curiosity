@@ -20,17 +20,15 @@
 
 @implementation FriendsViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated {
+	[self allFriend];
+	[HUD showUIBlockingIndicatorWithText:@"Loading..."];
 }
+
 #pragma mark - UITableViewDelegate methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -38,18 +36,26 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+	static FriendTableViewCell *cell;
+	if (cell == nil) {
+		cell = [tableView dequeueReusableCellWithIdentifier:@"friendsCell"];
+	}
+	[self fillContentCell:cell withIndexPath:indexPath];
+	return [cell heightForRowAtIndexPath:indexPath];
+}
+
+- (void)fillContentCell:(FriendTableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath {
+	friendsModel = friendsArray[indexPath.row];
+	cell.id_Label.text = [NSString stringWithFormat:@"%i", friendsModel.id];
+	cell.nameLabel.text  = friendsModel.name;
+	[cell.thumbnailImageView setImageWithURL:friendsModel.thumbnail];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"friendsCell";
-    FriendTableViewCell *friendcell = [tableView dequeueReusableCellWithIdentifier:identifier];
-	if (!friendcell) {
-        friendcell = [[FriendTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
-	friendsModel = friendsArray[indexPath.row];
-	friendcell.id_Label.text = [NSString stringWithFormat:@"%i", friendsModel.id];
-	friendcell.nameLabel.text = friendsModel.name;
+    FriendTableViewCell *friendcell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+	
+	[self fillContentCell:friendcell withIndexPath:indexPath];
 	
     return friendcell;
 }
@@ -61,8 +67,9 @@
 - (void)allFriend {
 	[FacebookHelper friendList:^(FBRequestConnection *connection, NSDictionary *result, NSError *error) {
 		if (!error) {
-			friendsArray = [FriendsModel arrayOfModelsFromDictionaries:result[@"data"]];
 			dispatch_async(dispatch_get_main_queue(), ^{
+				friendsArray = [FriendsModel arrayOfModelsFromDictionaries:result[@"data"]];
+				[HUD hideUIBlockingIndicator];
 				[self.tableView reloadData];
 			});
 		}

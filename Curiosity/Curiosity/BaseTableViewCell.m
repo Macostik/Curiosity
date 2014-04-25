@@ -28,4 +28,9 @@
     [super setSelected:selected animated:animated];
 }
 
+- (CGFloat) heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1.0f;
+}
+
 @end

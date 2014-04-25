@@ -21,7 +21,7 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #define kApplicationDocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
 #define kAccessTokenKey @"com.facebook.sdk:TokenInformationTokenKey"
-#define kRequestedPermissions @[@"basic_info"]
+#define kRequestedPermissions @[@"basic_info", @"user_birthday"]
 #define kFilename @"TokenInfo.plist"
 #define kTabBarControlIdentity @"TabBarID"
 #define kLogControlIdentity @"LoginID"
