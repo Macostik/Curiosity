@@ -95,7 +95,6 @@
 #if TARGET_IPHONE_SIMULATOR
     if (!tokenCaching) {
         tokenCaching = [[CachingAppToken alloc] init];
-        [tokenCaching setThirdPartySessionId:@"55555555"];
     }
 
 	fbSession = [[FBSession alloc] initWithAppID:nil

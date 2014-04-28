@@ -12,6 +12,7 @@ typedef void (^CompletionHandler)(FBRequestConnection *connection, id result, NS
 
 @interface FacebookHelper : NSObject
 
-+(void)friendList:(CompletionHandler)completionHandler;
++ (void)aboutMe:(CompletionHandler)completionHandler;
++ (void)friendList:(CompletionHandler)completionHandler;
 
 @end

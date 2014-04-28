@@ -8,6 +8,7 @@
 //
 
 #import "AppDelegate.h"
+//#import "FBAccessTokenData.h"
 
 @implementation AppDelegate
 
@@ -27,12 +28,23 @@
 	UIViewController *initViewController = [AppDelegate initViewController:controllerID];
     
     if (token[kAccessTokenKey]) {
-		if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+		if (FBSession.activeSession.state == FBSessionStateCreated) {
+			[[FBSession activeSession] openFromAccessTokenData:[[CachingAppToken instance] fetchFBAccessTokenData]
+											 completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+												 [self.window setRootViewController:initViewController];
+											 }];
+		} else if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
 			[FBSession openActiveSessionWithReadPermissions:kRequestedPermissions
 											   allowLoginUI:NO
 										  completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
 											  [self.window setRootViewController:initViewController];
 										  }];
+		} else {
+			[[[UIAlertView alloc] initWithTitle:@"Sassion state"
+										message:[NSString stringWithFormat:@"%i", [[FBSession activeSession] state]]
+									   delegate:nil
+							  cancelButtonTitle:@"Ok"
+							  otherButtonTitles:nil] show];
 		}
     } else {
         [(UINavigationController *)self.window.rootViewController pushViewController:initViewController animated:NO];

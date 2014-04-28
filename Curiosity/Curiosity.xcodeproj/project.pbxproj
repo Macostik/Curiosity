@@ -31,8 +31,6 @@
 		CE0E03E8190169FA009D8C0F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E03E7190169FA009D8C0F /* BaseViewController.m */; };
 		CE0E03ED19016F66009D8C0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E03EC19016F66009D8C0F /* Images.xcassets */; };
 		CE188456190692E000AE02EF /* CachingAppToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CE188455190692E000AE02EF /* CachingAppToken.m */; };
-		CE20553E190A79810004BB5F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CE2054B7190A79800004BB5F /* .gitignore */; };
-		CE20553F190A79810004BB5F /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = CE2054B8190A79800004BB5F /* .travis.yml */; };
 		CE205540190A79810004BB5F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2054BB190A79800004BB5F /* AFHTTPRequestOperation.m */; };
 		CE205541190A79810004BB5F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2054BD190A79800004BB5F /* AFHTTPRequestOperationManager.m */; };
 		CE205542190A79810004BB5F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2054BF190A79800004BB5F /* AFHTTPSessionManager.m */; };
@@ -50,6 +48,8 @@
 		CE205585190A79810004BB5F /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CE20553B190A79810004BB5F /* UIProgressView+AFNetworking.m */; };
 		CE205586190A79810004BB5F /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CE20553D190A79810004BB5F /* UIWebView+AFNetworking.m */; };
 		CE205595190A8D920004BB5F /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CE205594190A8D920004BB5F /* UIColor+CustomColors.m */; };
+		CE23EE6A190E3F410028A07E /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23EE69190E3F410028A07E /* AboutMeViewController.m */; };
+		CE23EE6D190E43A20028A07E /* AboutMeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23EE6C190E43A20028A07E /* AboutMeModel.m */; };
 		CE2A599319095170004CCB68 /* FriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A599219095170004CCB68 /* FriendsModel.m */; };
 		CE2A599619095948004CCB68 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A599519095948004CCB68 /* BaseTableViewCell.m */; };
 		CE2A599919095988004CCB68 /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A599819095988004CCB68 /* FriendTableViewCell.m */; };
@@ -121,8 +121,6 @@
 		CE0E03EC19016F66009D8C0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE188454190692E000AE02EF /* CachingAppToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CachingAppToken.h; path = ../CachingAppToken.h; sourceTree = "<group>"; };
 		CE188455190692E000AE02EF /* CachingAppToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CachingAppToken.m; path = ../CachingAppToken.m; sourceTree = "<group>"; };
-		CE2054B7190A79800004BB5F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		CE2054B8190A79800004BB5F /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		CE2054BA190A79800004BB5F /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		CE2054BB190A79800004BB5F /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		CE2054BC190A79800004BB5F /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -159,6 +157,10 @@
 		CE20553D190A79810004BB5F /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		CE205593190A8D920004BB5F /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		CE205594190A8D920004BB5F /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		CE23EE68190E3F410028A07E /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
+		CE23EE69190E3F410028A07E /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
+		CE23EE6B190E43A20028A07E /* AboutMeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeModel.h; sourceTree = "<group>"; };
+		CE23EE6C190E43A20028A07E /* AboutMeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeModel.m; sourceTree = "<group>"; };
 		CE2A599119095170004CCB68 /* FriendsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsModel.h; sourceTree = "<group>"; };
 		CE2A599219095170004CCB68 /* FriendsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsModel.m; sourceTree = "<group>"; };
 		CE2A599419095948004CCB68 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
@@ -343,6 +345,8 @@
 		CE0E03D819015CD3009D8C0F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE23EE68190E3F410028A07E /* AboutMeViewController.h */,
+				CE23EE69190E3F410028A07E /* AboutMeViewController.m */,
 				CE2BC33B1907A8F1009D25EB /* BaseTableViewController.h */,
 				CE2BC33C1907A8F1009D25EB /* BaseTableViewController.m */,
 				CE0E03E6190169FA009D8C0F /* BaseViewController.h */,
@@ -367,10 +371,12 @@
 		CE188457190692F900AE02EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE2BC33819079A23009D25EB /* FacebookHelper.h */,
-				CE2BC33919079A23009D25EB /* FacebookHelper.m */,
+				CE23EE6B190E43A20028A07E /* AboutMeModel.h */,
+				CE23EE6C190E43A20028A07E /* AboutMeModel.m */,
 				CE188454190692E000AE02EF /* CachingAppToken.h */,
 				CE188455190692E000AE02EF /* CachingAppToken.m */,
+				CE2BC33819079A23009D25EB /* FacebookHelper.h */,
+				CE2BC33919079A23009D25EB /* FacebookHelper.m */,
 				CE2A599119095170004CCB68 /* FriendsModel.h */,
 				CE2A599219095170004CCB68 /* FriendsModel.m */,
 			);
@@ -380,8 +386,6 @@
 		CE2054B6190A79800004BB5F /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				CE2054B7190A79800004BB5F /* .gitignore */,
-				CE2054B8190A79800004BB5F /* .travis.yml */,
 				CE2054B9190A79800004BB5F /* AFNetworking */,
 				CE20552E190A79810004BB5F /* UIKit+AFNetworking */,
 			);
@@ -599,8 +603,6 @@
 				CE0E03ED19016F66009D8C0F /* Images.xcassets in Resources */,
 				CE2BC3601907BB13009D25EB /* btnCheck.png in Resources */,
 				CE0E03901901280D009D8C0F /* InfoPlist.strings in Resources */,
-				CE20553E190A79810004BB5F /* .gitignore in Resources */,
-				CE20553F190A79810004BB5F /* .travis.yml in Resources */,
 				CE0E03991901280D009D8C0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,11 +645,13 @@
 				CE205585190A79810004BB5F /* UIProgressView+AFNetworking.m in Sources */,
 				CE0E039C1901280D009D8C0F /* FriendsViewController.m in Sources */,
 				CE188456190692E000AE02EF /* CachingAppToken.m in Sources */,
+				CE23EE6D190E43A20028A07E /* AboutMeModel.m in Sources */,
 				CE0E03DD19015D6F009D8C0F /* YGLabel.m in Sources */,
 				CE2BC36A1907BB13009D25EB /* JSONHTTPClient.m in Sources */,
 				CE205541190A79810004BB5F /* AFHTTPRequestOperationManager.m in Sources */,
 				CE2A599319095170004CCB68 /* FriendsModel.m in Sources */,
 				CE205583190A79810004BB5F /* UIButton+AFNetworking.m in Sources */,
+				CE23EE6A190E3F410028A07E /* AboutMeViewController.m in Sources */,
 				CE2BC36D1907BB13009D25EB /* JSONValueTransformer.m in Sources */,
 				CE205542190A79810004BB5F /* AFHTTPSessionManager.m in Sources */,
 				CE2BC33D1907A8F1009D25EB /* BaseTableViewController.m in Sources */,

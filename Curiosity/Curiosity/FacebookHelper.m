@@ -26,12 +26,21 @@
     return facebookHelper;
 }
 
-+ (void)friendList:(CompletionHandler)completionHandler {
-	[FBRequestConnection startWithGraphPath:@"/me/friends?fields=name,gender,link,location,picture.height(120).width(120)"
++ (void)feedRequest:(NSString *)parameters completionHandler:(CompletionHandler)completionHandler {
+	[FBRequestConnection startWithGraphPath:parameters
 								 parameters:nil
 								 HTTPMethod:@"GET"
 						  completionHandler:completionHandler];
 }
 
++ (void)aboutMe:(CompletionHandler)completionHandler {
+	NSString *requestParameters = @"/me";
+	[FacebookHelper feedRequest:requestParameters completionHandler:completionHandler];
+}
+
++ (void)friendList:(CompletionHandler)completionHandler {
+	NSString *requestParameters = @"/me/friends?fields=name,gender,link,location,picture.height(120).width(120)";
+	[FacebookHelper feedRequest:requestParameters completionHandler:completionHandler];
+}
 
 @end

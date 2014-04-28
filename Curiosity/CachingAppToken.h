@@ -10,9 +10,9 @@
 
 @interface CachingAppToken : FBSessionTokenCachingStrategy
 
-@property (nonatomic, strong) NSString *thirdPartySessionId;
-
++ (instancetype)instance;
 + (NSDictionary *)readData;
 + (void)writeData:(NSDictionary *)data;
+- (FBAccessTokenData *)fetchFBAccessTokenData;
 
 @end

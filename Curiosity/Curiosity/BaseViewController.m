@@ -8,7 +8,9 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController ()
+@interface BaseViewController () {
+	UIImageView *backgroundView;
+}
 
 @end
 
@@ -30,6 +32,18 @@
         self.edgesForExtendedLayout &= ~UIRectEdgeTop;
     }
 #endif
+//	backgroundView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+//	[self.view addSubview:backgroundView];
+//	
+//	UIColor *tintColor = [UIColor colorWithRed:30.0f/255.0f green:70/255.0f blue:140/255.0f alpha:0.2f];
+//	UIImage *backgroundImage = [[UIImage imageNamed:@"PlaceholderMeImage"] applyBlurWithRadius:12 tintColor:tintColor saturationDeltaFactor:0.8 maskImage:nil];
+//	backgroundView.image = backgroundImage;
+//	
+//	UIImageView *imageView = [[UIImageView alloc] initWithImage:backgroundImage];
+//	imageView.contentMode = UIViewContentModeScaleAspectFill;
+//	imageView.clipsToBounds = YES;
+//	imageView.alpha = 0.8f;
+//	backgroundView = imageView;
 }
 
 @end

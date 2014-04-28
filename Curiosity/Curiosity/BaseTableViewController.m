@@ -31,7 +31,7 @@
     }
 #endif
 	UIColor *tintColor = [UIColor colorWithRed:140/255.0f green:70/255.0f blue:35/255.0f alpha:0.2f];
-	UIImage *backgroundImage = [[UIImage imageNamed:@"PlaceholderImage"] applyBlurWithRadius:5 tintColor:tintColor saturationDeltaFactor:0.8 maskImage:nil];
+	UIImage *backgroundImage = [[UIImage imageNamed:@"PlaceholderFriendsImage"] applyBlurWithRadius:5 tintColor:tintColor saturationDeltaFactor:0.8 maskImage:nil];
 	
 	UIImageView *imageView = [[UIImageView alloc] initWithImage:backgroundImage];
 	imageView.contentMode = UIViewContentModeScaleAspectFill;

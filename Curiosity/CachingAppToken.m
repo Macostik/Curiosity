@@ -15,9 +15,18 @@
 - (id)init {
     self = [super init];
     if (self) {
-        _thirdPartySessionId = @"";
     }
     return self;
+}
+
++ (instancetype)instance {
+    static CachingAppToken *cachingAppToken = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cachingAppToken = [[self alloc] init];
+    });
+    
+    return cachingAppToken;
 }
 
 #pragma FBTokenCachingStrategy override methods
@@ -27,10 +36,12 @@
 }
 
 - (FBAccessTokenData *)fetchFBAccessTokenData {
-    if ([CachingAppToken readData]) {
+	NSDictionary *tokenInformation;
+	tokenInformation = [CachingAppToken readData];
+    if (!tokenInformation) {
         return nil;
     }
-	return [FBAccessTokenData createTokenFromDictionary:@{}.mutableCopy];
+	return [FBAccessTokenData createTokenFromDictionary:tokenInformation];
 }
 
 - (void)clearToken {

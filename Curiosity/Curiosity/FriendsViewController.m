@@ -31,11 +31,6 @@
 	}
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewDidAppear:animated];
-	
-}
-
 #pragma mark - UITableViewDelegate methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
